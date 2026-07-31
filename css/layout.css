@@ -1,0 +1,45 @@
+/* css/layout.css */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* CSS Grid layout for standard sections */
+.grid-layout {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid-layout { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-layout { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Bento Box Grid (Trending Section) */
+.bento-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+  .bento-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.section-padding {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
