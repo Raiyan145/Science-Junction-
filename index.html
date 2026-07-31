@@ -19,7 +19,27 @@
 <body>
 
     <!-- Header will be injected/built in Phase 3 -->
-    <header id="site-header" class="main-header container"></header>
+    <header id="site-header" class="main-header container"></<header id="site-header" class="main-header">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">Science Junction<span class="text-accent-blue">.</span></a>
+        
+        <nav class="nav-links" aria-label="Main Navigation">
+            <a href="/category.html?c=physics" class="nav-link">Physics</a>
+            <a href="/category.html?c=space" class="nav-link">Space</a>
+            <a href="/category.html?c=biology" class="nav-link">Biology</a>
+            <a href="/category.html?c=environment" class="nav-link">Environment</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="icon-btn">
+                <svg id="theme-icon-moon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+            </button>
+            <button class="btn-primary" style="margin-left: 1rem;">Subscribe</button>
+        </div>
+    </div>
+    </header>
+        >
 
     <main>
         <!-- Ticker Section (Latest News) -->
