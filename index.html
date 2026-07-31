@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Junction | Premium Science News & Discoveries</title>
+    <meta name="description" content="Explore breaking scientific news, research, and discoveries across physics, biology, space, and environment.">
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+    <!-- Header will be injected/built in Phase 3 -->
+    <header id="site-header" class="main-header container"></header>
+
+    <main>
+        <!-- Ticker Section (Latest News) -->
+        <section class="latest-news-ticker" aria-label="Latest News">
+            <div class="container flex-row">
+                <span class="ticker-label font-bold text-accent-blue">Breaking</span>
+                <ul class="ticker-list" id="breaking-news-list">
+                    <!-- Populated via JS -->
+                    <li>Loading latest discoveries...</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero section-padding container">
+            <article class="hero-card hero-layout">
+                <div class="hero-image-wrapper">
+                    <!-- Placeholder for Edge/CDN loaded image -->
+                    <div class="image-skeleton rounded-lg"></div>
+                </div>
+                <div class="hero-content">
+                    <span class="category-badge badge-space">Astrophysics</span>
+                    <h1 class="hero-title font-serif">James Webb Telescope Detects Carbon Dioxide on Distant Exoplanet</h1>
+                    <p class="hero-excerpt text-secondary">In a major breakthrough, researchers have found definitive evidence of CO2 in the atmosphere of a gas giant orbiting a Sun-like star 700 light-years away.</p>
+                    <div class="meta-data text-tertiary">
+                        <span>By Dr. Sarah Jenkins</span> &bull; <span>5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Trending Bento Grid -->
+        <section class="trending section-padding container" aria-labelledby="trending-heading">
+            <h2 id="trending-heading" class="section-title">Trending Now</h2>
+            <div class="bento-grid" id="trending-articles">
+                <!-- Primary Bento Item -->
+                <article class="bento-item bento-card">
+                    <div class="bento-bg" style="background-color: var(--bg-surface-hover);"></div>
+                    <div class="bento-content">
+                        <span class="category-badge badge-biology">Biology</span>
+                        <h3 class="font-serif">CRISPR Gene Editing Shows Promise in Reversing Genetic Deafness</h3>
+                    </div>
+                </article>
+                
+                <!-- Secondary Bento Items -->
+                <article class="bento-item bento-card">
+                    <div class="bento-content">
+                        <span class="category-badge badge-tech">AI & Tech</span>
+                        <h3 class="font-sans">New Neural Network Predicts Protein Folding at Unprecedented Speeds</h3>
+                    </div>
+                </article>
+
+                <article class="bento-item bento-card">
+                    <div class="bento-content">
+                        <span class="category-badge badge-climate">Climate</span>
+                        <h3 class="font-sans">Ocean Temperatures Reach Record Highs in the Atlantic</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter section-padding">
+            <div class="container">
+                <div class="newsletter-card glass-effect text-center">
+                    <h2>Stay at the Forefront of Discovery</h2>
+                    <p class="text-secondary">Join 50,000+ readers getting the week's most important science news.</p>
+                    <form id="subscribe-form" class="subscribe-form">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be built alongside navigation -->
+    <footer id="site-footer" class="main-footer"></footer>
+
+    <!-- Main JS Application Logic -->
+    <script type="module" src="/js/config.js"></script>
+    <script type="module" src="/js/pages/home.js"></script>
+</body>
+</html>
